@@ -1,0 +1,56 @@
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+h1, h2, h3, h4, p {
+    margin: 0;
+    font-weight: normal;
+}
+
+.app-container {
+    height: 100%;
+}
+
+.app__wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.app__selector-container {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    visibility: hidden;
+
+    &_visible {
+        visibility: visible;
+    }
+}
+
+.app__map-container {
+    position: relative;
+    flex-grow: 1;
+}
+
+.app__station-info-popup {
+    position: absolute;
+    bottom: 0;
+    background: #fff;
+    padding: 10px;
+    left: 0;
+    right: 0;
+}
+
+.app__station-title {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.app__station-info {
+    margin-bottom: 10px;
+}
