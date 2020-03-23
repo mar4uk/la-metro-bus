@@ -1,11 +1,11 @@
 const prepareState = (req, res, next) => {
-    req.state = {
-        lines: {}
-    }
+  req.state = {
+    lines: {}
+  }
 
-    next();
+  next();
 };
 
 export {
-    prepareState
+  prepareState
 };

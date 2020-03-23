@@ -13,7 +13,7 @@ delete window.__INITIAL_STATE__;
 const store = createStore(reducer, initialState, composeWithDevTools(applyMiddleware(thunk)));
 
 ReactDOM.hydrate(
-    <Provider store={store}>
-        <App />
-    </Provider>
+  <Provider store={store}>
+    <App />
+  </Provider>
 , document.getElementById('app-container'));

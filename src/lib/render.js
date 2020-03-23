@@ -8,22 +8,22 @@ import reducer from '../reducers';
 import thunk from 'redux-thunk';
 
 function handleRender(req, res) {
-    if (req.xhr) {
-        return;
-    }
+  if (req.xhr) {
+    return;
+  }
 
-    const store = createStore(reducer, req.state, applyMiddleware(thunk));
+  const store = createStore(reducer, req.state, applyMiddleware(thunk));
 
-    const content = ReactDOMServer.renderToString(
-        <Provider store={store}>
-            <App />
-        </Provider>
-    );
+  const content = ReactDOMServer.renderToString(
+    <Provider store={store}>
+      <App />
+    </Provider>
+  );
 
-    res.render('index.hbs', {
-        content,
-        state: escape(JSON.stringify(Object.assign({}, store.getState())))
-    });
+  res.render('index.hbs', {
+    content,
+    state: escape(JSON.stringify(Object.assign({}, store.getState())))
+  });
 }
 
 export default handleRender;
