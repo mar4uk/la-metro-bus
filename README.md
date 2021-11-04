@@ -16,7 +16,7 @@ I used the following technologies and frameworks:
 
 How to build and start
 ----------------
-Please use Node.js 8.
+Please use Node.js 16.
 
 ```bash
 npm install
